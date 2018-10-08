@@ -1,0 +1,20 @@
+package com.example.wy.fingerkitchen.activity;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.example.wy.fingerkitchen.R;
+
+/**
+ * author: wangyang
+ * date:   2018/10/7 21:22
+ * description:
+ */
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
