@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">FingerKitchen</string>
+
+    <string name="app_name">指尖厨房</string>
+
+    <!--首页底部导航栏相关-->
+    <string name="navigation_home_text">首页</string>
+    <string name="navigation_classify_text">分类</string>
+    <string name="navigation_mine_text">我的</string>
+
 </resources>

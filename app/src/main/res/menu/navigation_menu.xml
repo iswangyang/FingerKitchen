@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_home"
+        android:icon="@mipmap/home_normal"
+        android:title="@string/navigation_home_text"/>
+
+    <item
+        android:id="@+id/item_classify"
+        android:icon="@mipmap/classify_normal"
+        android:title="@string/navigation_classify_text"/>
+
+    <item
+        android:id="@+id/item_mine"
+        android:icon="@mipmap/mine_normal"
+        android:title="@string/navigation_mine_text"/>
+</menu>
