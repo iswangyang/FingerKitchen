@@ -1,7 +1,7 @@
 package com.example.wy.fingerkitchen.network;
 
 import com.example.wy.fingerkitchen.network.request.IRequest;
-import com.example.wy.fingerkitchen.network.response.IResponse;
+import com.example.wy.fingerkitchen.network.response.IRequestCallback;
 
 /**
  * @author wangyang
@@ -9,6 +9,6 @@ import com.example.wy.fingerkitchen.network.response.IResponse;
  */
 public interface IOkHttpClient {
 
-    IResponse performRequest(IRequest request);
+    void performRequest(IRequest request, IRequestCallback callback);
 
 }

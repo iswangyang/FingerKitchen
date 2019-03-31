@@ -5,6 +5,6 @@
     <!--首页底部导航栏相关-->
     <string name="navigation_home_text">首页</string>
     <string name="navigation_classify_text">分类</string>
-    <string name="navigation_mine_text">我的</string>
+    <string name="navigation_collect_text">收藏</string>
 
 </resources>

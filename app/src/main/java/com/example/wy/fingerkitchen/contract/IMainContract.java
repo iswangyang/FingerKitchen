@@ -13,8 +13,5 @@ public interface IMainContract {
 
     interface IMainPresenter {
 
-        void initViewPager();
-
-        void initBottomNavigation();
     }
 }

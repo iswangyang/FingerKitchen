@@ -11,12 +11,6 @@ public interface IRequest {
     String GET = "GET";
     String POST = "POST";
 
-    /**
-     * 设置请求method
-     * @param method
-     */
-    void setMethod(String method);
-
     String getMethod();
 
     /**

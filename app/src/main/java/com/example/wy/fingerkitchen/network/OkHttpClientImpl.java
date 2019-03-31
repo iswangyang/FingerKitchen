@@ -1,9 +1,12 @@
 package com.example.wy.fingerkitchen.network;
 
 import com.example.wy.fingerkitchen.network.request.IRequest;
-import com.example.wy.fingerkitchen.network.response.IResponse;
-import com.example.wy.fingerkitchen.network.response.ResponseImpl;
+import com.example.wy.fingerkitchen.network.response.IRequestCallback;
+
 import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -23,9 +26,9 @@ public class OkHttpClientImpl implements IOkHttpClient {
     }
 
     @Override
-    public IResponse performRequest(IRequest request) {
+    public void performRequest(IRequest request, final IRequestCallback callback) {
         if (request == null) {
-            return null;
+            return;
         }
         Request.Builder builder = new Request.Builder();
         builder.url(request.getRequestUrl());
@@ -37,16 +40,19 @@ public class OkHttpClientImpl implements IOkHttpClient {
             builder.get();
         }
         Request realRequest = builder.build();
-        IResponse response = new ResponseImpl();
-        try {
-            Response okResponse = mOkHttpClient.newCall(realRequest).execute();
-            if (okResponse != null) {
-                response.setCode(okResponse.code());
-                response.setResult(okResponse.body().string());
+        Call call = mOkHttpClient.newCall(realRequest);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return response;
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                if (response != null && callback != null) {
+                   callback.onSuccess(response.body().string());
+                }
+            }
+        });
     }
 }

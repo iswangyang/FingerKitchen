@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/dish_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:id="@+id/dish_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dish_image"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:lines="1"
+        android:ellipsize="end"
+        tools:text="xxxx"/>
+
+    <TextView
+        android:id="@+id/dish_info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/dish_image"
+        android:layout_alignBottom="@id/dish_image"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:textSize="13sp"
+        android:textColor="#999999"
+        android:lines="1"
+        android:ellipsize="end"
+        tools:text="xxxxxxx"/>
+
+</RelativeLayout>

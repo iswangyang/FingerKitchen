@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.wy.fingerkitchen"
-        minSdkVersion 17
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -28,5 +28,7 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.11.0'
     implementation 'com.facebook.fresco:fresco:1.10.0'
     implementation 'com.android.support:design:27.1.1'
-
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.zhy:magic-viewpager:1.0.1'
+    implementation 'com.carson_ho:SearchLayout:1.0.1'
 }

@@ -14,7 +14,7 @@ import com.example.wy.fingerkitchen.R;
  */
 public class SplashActivity extends AppCompatActivity {
 
-    private static final long SPLASH_TIME_GAP = 3 * 1000;
+    private static final long SPLASH_TIME_GAP = (long) (2.5 * 1000);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ public class SplashActivity extends AppCompatActivity {
                 intent.setAction(Intent.ACTION_VIEW);
                 intent.setClass(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         }, SPLASH_TIME_GAP);
     }
